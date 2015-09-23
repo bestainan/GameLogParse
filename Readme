@@ -1,0 +1,18 @@
+
+
+
+1.在计划任务中加入每日抓取日志的脚本
+    crontab -e
+    加入（每天0点执行）
+    * */1 * * * python /opt/GameLogParse/parse_insert_to_mysql.py
+    30 21 * * * python /opt/GameLogParse/run.py 2015-07-01
+    0 1 * * * python /opt/GameLogParse/run.py 2015-07-02
+    0 2 * * * python /opt/GameLogParse/run.py 2015-07-03
+    0 3 * * * python /opt/GameLogParse/run.py 2015-07-05
+    0 4 * * * python /opt/GameLogParse/run.py 2015-07-06
+    0 5 * * * python /opt/GameLogParse/run.py 2015-07-07
+
+2. 加入每日5分钟抓取日志到mysql部分
+   （用线程实现的5分钟抓取间隔）
+    运行脚本run.sh
+

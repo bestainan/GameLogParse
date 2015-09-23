@@ -1,2 +1,1 @@
 # GameLogParse
-GameLogParse
